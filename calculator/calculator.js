@@ -1,25 +1,44 @@
-function add () {
-	
+function add (num1, num2) {
+	return num1 + num2;
 }
 
-function subtract () {
-	
+function subtract (num1, num2) {
+	return num1 - num2;
 }
 
-function sum () {
-	
+function sum (listOfNumbers) {
+	if(listOfNumbers.length <1) return 0;
+	let result = 0;
+	listOfNumbers.forEach(num => {
+		result += num;
+	});
+	return result;
 }
 
-function multiply () {
-	
+function multiply (listOfNumbers) {
+	if(listOfNumbers.length <1) return 0;
+	let result = 1;
+	listOfNumbers.forEach(num => {
+		result *= num;
+	});
+	return result;
 }
 
-function power() {
-	
+function power(num, exponential) {
+	let result = 1;
+	for(i = 0; i<exponential; i++){
+		result *= num;
+	}
+	return result;
 }
 
-function factorial() {
-	
+function factorial(num) {
+	let result = 1;
+	while(num > 1){
+		result *= num;
+		num--;
+	}
+	return result;
 }
 
 module.exports = {
